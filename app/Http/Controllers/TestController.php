@@ -49,6 +49,21 @@ class TestController extends Controller
         echo $response;
     }
 
+    public function header1(){
+        $url='http://api.1911.com/test1';
+        $uid=1111;
+        $token='abcdefg';
+        $headers=[
+            'uid:'.$uid,
+            //'token:'.$token,
+        ];
+        $ch=curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_HTTPHEADER,$headers);
+        curl_exec($ch);
+        curl_close($ch);
+    }
+
 
 
 
