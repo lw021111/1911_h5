@@ -371,15 +371,15 @@
 			</div>
 			<div class="login">
 				<div class="row">
-					<form class="col s12">
+					<form class="col s12" action="{{url('user/logindo')}}" method="post">
 						<div class="input-field">
-							<input type="text" class="validate" placeholder="USERNAME" required>
+							<input type="text" class="validate" name="username" placeholder="USERNAME" required>
 						</div>
 						<div class="input-field">
-							<input type="password" class="validate" placeholder="PASSWORD" required>
+							<input type="password" class="validate" name="pwd" placeholder="PASSWORD" required>
 						</div>
 						<a href=""><h6>Forgot Password ?</h6></a>
-						<a href="" class="btn button-default">LOGIN</a>
+						<input type="submit" class="btn button-default" value="LOGIN">
 					</form>
 				</div>
 			</div>

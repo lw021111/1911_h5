@@ -27,3 +27,4 @@ Route::any('user/regdo','User\IndexController@regdo');
 Route::any('user/login','User\IndexController@login');
 Route::any('user/logindo','User\IndexController@logindo');
 Route::any('index/index','Index\IndexController@index');
+Route::any('/oauth/git','OauthController@git');
