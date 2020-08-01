@@ -6,11 +6,22 @@ use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 class OauthController extends Controller
 {
-   public function git(){
-    echo '<pre>';print_r($_GET);echo '</pre>';
-   }
+    public function git(){
+        $code=$_GET['code'];
 
+        $this->getToken($code);
+        echo '<pre>';print_r($_GET);echo '</pre>';
+    }
 
+    protected function getToken(){
+        $url='https://github.com/login/oauth/access_token';
+        $token="";
+        $this->getGithubUserInfo($token);
+    }
+
+    protected function getGithubUserInfo($token){
+        $url='https://api.github.com/user';
+    }
 
 
 
